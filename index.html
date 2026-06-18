@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>도시가스 전문공사 | 신규설치·철거·노후 배관 교체</title>
+<link rel="preconnect" href="https://fastly.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, sans-serif; color: #16191d; background: #ffffff; -webkit-font-smoothing: antialiased; }
+  a { text-decoration: none; color: inherit; }
+  @keyframes floatUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 860px) {
+    .nav-links { display: none !important; }
+    .nav-wrap { padding: 0 20px !important; height: 64px !important; }
+    .hero-grid { grid-template-columns: 1fr !important; gap: 36px !important; padding: 60px 22px 64px !important; }
+    .hero-h1 { font-size: 38px !important; }
+    .hero-sub { font-size: 17px !important; }
+    .hero-img { aspect-ratio: 16/10 !important; }
+    .hero-cta { width: 100% !important; justify-content: center !important; }
+    .hero-statwrap { padding: 0 22px !important; }
+    .sec { padding-left: 22px !important; padding-right: 22px !important; padding-top: 64px !important; padding-bottom: 64px !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr) !important; row-gap: 36px !important; }
+    .grid-2 { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .h2-big { font-size: 31px !important; }
+    .why-inner { gap: 48px !important; }
+    .footer-wrap { flex-direction: column !important; }
+    .footer-right { text-align: left !important; }
+    #quote { padding-top: 44px !important; padding-bottom: 44px !important; }
+    #quote .grid-2 { gap: 26px !important; }
+    #quote .grid-2 > div:nth-child(2) { padding: 24px !important; }
+    #quote .contact-card { padding: 18px 20px !important; }
+  }
+  @media (max-width: 600px) {
+    .hero-grid { padding: 46px 22px 50px !important; gap: 28px !important; }
+    .hero-h1 { font-size: 30px !important; }
+    .hero-sub { font-size: 15.5px !important; margin-bottom: 26px !important; }
+    .hero-cta { font-size: 15.5px !important; padding: 14px 22px !important; }
+    .h2-big { font-size: 25px !important; }
+    .sec { padding-top: 44px !important; padding-bottom: 44px !important; }
+    #services { padding-bottom: 12px !important; }
+    #why { margin-top: 0 !important; }
+    #services > div:first-child,
+    #process > div:first-child { margin-bottom: 28px !important; }
+    #services > div:first-child > p,
+    #process > div:first-child > p,
+    #area p { font-size: 15px !important; }
+    #services .grid-3 > div { padding: 26px 22px !important; }
+    #services .grid-3 h3 { font-size: 20px !important; }
+    #why .why-cards > div { padding: 22px !important; }
+    #why .why-cards > div > div { font-size: 19px !important; }
+    #why .why-inner > div:first-child > p { font-size: 15px !important; }
+    #process .grid-4 > div > div { width: 52px !important; height: 52px !important; font-size: 21px !important; margin-bottom: 14px !important; }
+    #process .grid-4 h4 { font-size: 17px !important; }
+    #quote .grid-2 > div:first-child > p { font-size: 15px !important; margin-bottom: 22px !important; }
+    #quote input { height: 48px !important; font-size: 15px !important; }
+    #quote textarea { font-size: 15px !important; }
+    #quote .contact-card > div:last-child > div:last-child { font-size: 21px !important; }
+    .footer-right > div:first-child,
+    .footer-right > div:nth-child(2) { font-size: 16px !important; }
+  }
+  @media (max-width: 460px) {
+    .why-cards { grid-template-columns: 1fr !important; }
+    .hero-stat-cell { font-size: 22px !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="width:100%; overflow-x:hidden;">
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.88); backdrop-filter:saturate(180%) blur(12px); border-bottom:1px solid #eceef1;">
+    <nav class="nav-wrap" style="max-width:1180px; margin:0 auto; padding:0 32px; height:74px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="#top" style="display:flex; align-items:center; gap:11px;">
+        <span style="width:34px; height:34px; border-radius:9px; background:#0f4c91; display:flex; align-items:center; justify-content:center;">
+          <span style="width:13px; height:13px; border-radius:50% 50% 50% 2px; background:#ff7a3d; transform:rotate(45deg);"></span>
+        </span>
+        <span style="font-size:18px; font-weight:800; letter-spacing:-0.02em; color:#0f2742;">도시가스 전문공사</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:34px;">
+        <div class="nav-links" style="display:flex; gap:30px; font-size:15.5px; font-weight:600; color:#475160;">
+          <a href="#services" style="display:block;">시공분야</a>
+          <a href="#why" style="display:block;">강점</a>
+          <a href="#process" style="display:block;">진행절차</a>
+          <a href="#area" style="display:block;">시공지역</a>
+        </div>
+        <a href="#quote" style="display:inline-flex; align-items:center; gap:8px; background:#0f4c91; color:#fff; font-size:15px; font-weight:700; padding:11px 20px; border-radius:10px;">견적문의</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" style="position:relative; background:linear-gradient(180deg,#0c2f5a 0%,#0f4c91 100%); color:#fff; overflow:hidden;">
+    <div style="position:absolute; right:-120px; top:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle,rgba(255,122,61,0.22),transparent 68%);"></div>
+    <div class="hero-grid" style="max-width:1180px; margin:0 auto; padding:96px 32px 104px; display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center; position:relative;">
+      <div style="animation:floatUp 0.7s ease both;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.22); padding:8px 15px; border-radius:100px; font-size:14px; font-weight:600; letter-spacing:0.01em; margin-bottom:28px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#5fd08a;"></span>
+          서울·경기 수도권 전문 시공
+        </div>
+        <h1 class="hero-h1" style="font-size:54px; line-height:1.18; font-weight:800; letter-spacing:-0.03em; margin-bottom:24px;">도시가스 배관,<br>처음부터 끝까지<br><span style="color:#ff9b6b;">한 곳에서.</span></h1>
+        <p class="hero-sub" style="font-size:19px; line-height:1.7; color:rgba(255,255,255,0.82); font-weight:400; max-width:480px; margin-bottom:38px;">신규설치부터 노후 배관 철거·교체까지. 자격을 갖춘 도시가스 전문공사업체가 안전하고 정확하게 시공합니다.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="#quote" class="hero-cta" style="display:inline-flex; align-items:center; gap:9px; background:#ff7a3d; color:#fff; font-size:17px; font-weight:700; padding:16px 30px; border-radius:12px; box-shadow:0 10px 26px rgba(255,122,61,0.34);">무료 견적문의<span style="font-size:18px;">→</span></a>
+          <a href="#services" style="display:inline-flex; align-items:center; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); color:#fff; font-size:17px; font-weight:600; padding:16px 28px; border-radius:12px;">시공분야 보기</a>
+        </div>
+      </div>
+      <div style="animation:floatUp 0.9s ease both;">
+        <div class="hero-img" style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#11406f,#11406f 14px,#143f6c 14px,#143f6c 28px); border:1px solid rgba(255,255,255,0.14); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:ui-monospace,Menlo,monospace; font-size:13px; color:rgba(255,255,255,0.5); text-align:center; line-height:1.7;">현장 시공 사진<br>(배관 설치 / 작업 모습)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="sec" style="max-width:1180px; margin:0 auto; padding:108px 32px 40px;">
+    <div style="text-align:center; margin-bottom:56px;">
+      <div style="font-size:14px; font-weight:700; letter-spacing:0.08em; color:#0f4c91; margin-bottom:14px;">SERVICES</div>
+      <h2 class="h2-big" style="font-size:40px; font-weight:800; letter-spacing:-0.03em; color:#0f2742;">시공 분야</h2>
+      <p style="font-size:17px; color:#5b6573; margin-top:14px;">도시가스 배관에 관한 모든 공사를 책임지고 진행합니다.</p>
+    </div>
+    <div class="grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+      <div style="background:#fff; border:1px solid #e9ebef; border-radius:18px; padding:36px 32px; transition:all .2s;">
+        <div style="width:52px; height:52px; border-radius:13px; background:#eaf2fb; display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f4c91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 8h18M3 16h18"></path><circle cx="8" cy="8" r="0"></circle></svg>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#0f4c91; margin-bottom:8px;">01</div>
+        <h3 style="font-size:23px; font-weight:800; color:#0f2742; margin-bottom:12px;">신규 설치</h3>
+        <p style="font-size:15.5px; line-height:1.72; color:#5b6573;">신축·증축 건물의 도시가스 배관 신규 인입 및 설치. 설계부터 시공, 안전검사까지 완료해 드립니다.</p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #e9ebef; border-radius:18px; padding:36px 32px;">
+        <div style="width:52px; height:52px; border-radius:13px; background:#fdeee6; display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e0622e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"></path></svg>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#e0622e; margin-bottom:8px;">02</div>
+        <h3 style="font-size:23px; font-weight:800; color:#0f2742; margin-bottom:12px;">철거</h3>
+        <p style="font-size:15.5px; line-height:1.72; color:#5b6573;">건물 철거·리모델링 시 가스 배관 안전 차단 및 철거. 가스 누출 위험 없이 규정에 맞게 처리합니다.</p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #e9ebef; border-radius:18px; padding:36px 32px;">
+        <div style="width:52px; height:52px; border-radius:13px; background:#eaf2fb; display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f4c91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"></path><path d="M3.5 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.65 4.36A9 9 0 0 0 20.5 15"></path></svg>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#0f4c91; margin-bottom:8px;">03</div>
+        <h3 style="font-size:23px; font-weight:800; color:#0f2742; margin-bottom:12px;">노후화 교체</h3>
+        <p style="font-size:15.5px; line-height:1.72; color:#5b6573;">오래된 가스 배관 진단 후 교체 시공. 부식·노후 배관을 새것으로 바꿔 안전사고를 예방합니다.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section id="why" style="background:#f6f8fa; margin-top:88px;">
+    <div class="sec" style="max-width:1180px; margin:0 auto; padding:100px 32px;">
+      <div class="grid-2 why-inner" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:72px; align-items:center;">
+        <div>
+          <div style="font-size:14px; font-weight:700; letter-spacing:0.08em; color:#0f4c91; margin-bottom:14px;">WHY US</div>
+          <h2 class="h2-big" style="font-size:40px; font-weight:800; letter-spacing:-0.03em; color:#0f2742; line-height:1.25; margin-bottom:20px;">가스 공사는<br>안전이 전부입니다</h2>
+          <p style="font-size:17px; line-height:1.74; color:#5b6573;">눈에 보이지 않는 배관일수록 시공 품질이 중요합니다. 자격과 경험을 갖춘 전문 인력이 직접 시공하고, 작업 후 안전점검까지 책임집니다.</p>
+        </div>
+        <div class="why-cards" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <div style="background:#fff; border:1px solid #e9ebef; border-radius:16px; padding:28px;">
+            <div style="font-size:22px; font-weight:800; color:#0f4c91; margin-bottom:10px;">유자격 시공</div>
+            <p style="font-size:14.5px; line-height:1.65; color:#5b6573;">가스시설 시공 자격을 갖춘 정식 전문공사업체입니다.</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e9ebef; border-radius:16px; padding:28px;">
+            <div style="font-size:22px; font-weight:800; color:#0f4c91; margin-bottom:10px;">안전 우선</div>
+            <p style="font-size:14.5px; line-height:1.65; color:#5b6573;">시공 전·후 가스 누출 점검으로 사고를 예방합니다.</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e9ebef; border-radius:16px; padding:28px;">
+            <div style="font-size:22px; font-weight:800; color:#0f4c91; margin-bottom:10px;">신속 대응</div>
+            <p style="font-size:14.5px; line-height:1.65; color:#5b6573;">상담 후 빠른 현장 방문과 명확한 견적을 드립니다.</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e9ebef; border-radius:16px; padding:28px;">
+            <div style="font-size:22px; font-weight:800; color:#0f4c91; margin-bottom:10px;">투명한 견적</div>
+            <p style="font-size:14.5px; line-height:1.65; color:#5b6573;">불필요한 공사 없이 필요한 부분만 정직하게 시공합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="sec" style="max-width:1180px; margin:0 auto; padding:104px 32px;">
+    <div style="text-align:center; margin-bottom:56px;">
+      <div style="font-size:14px; font-weight:700; letter-spacing:0.08em; color:#0f4c91; margin-bottom:14px;">PROCESS</div>
+      <h2 class="h2-big" style="font-size:40px; font-weight:800; letter-spacing:-0.03em; color:#0f2742;">진행 절차</h2>
+      <p style="font-size:17px; color:#5b6573; margin-top:14px;">문의부터 시공 완료까지, 간단하고 명확하게 진행됩니다.</p>
+    </div>
+    <div class="grid-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+      <div style="text-align:center;">
+        <div style="width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#0f4c91; color:#fff; font-size:24px; font-weight:800; display:flex; align-items:center; justify-content:center;">1</div>
+        <h4 style="font-size:19px; font-weight:800; color:#0f2742; margin-bottom:8px;">견적 문의</h4>
+        <p style="font-size:14.5px; line-height:1.6; color:#5b6573;">전화 또는 문의 양식으로 현장 상황을 알려주세요.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#0f4c91; color:#fff; font-size:24px; font-weight:800; display:flex; align-items:center; justify-content:center;">2</div>
+        <h4 style="font-size:19px; font-weight:800; color:#0f2742; margin-bottom:8px;">현장 확인</h4>
+        <p style="font-size:14.5px; line-height:1.6; color:#5b6573;">직접 방문해 배관 상태와 작업 범위를 점검합니다.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#0f4c91; color:#fff; font-size:24px; font-weight:800; display:flex; align-items:center; justify-content:center;">3</div>
+        <h4 style="font-size:19px; font-weight:800; color:#0f2742; margin-bottom:8px;">견적 안내</h4>
+        <p style="font-size:14.5px; line-height:1.6; color:#5b6573;">투명한 비용과 일정을 명확하게 안내해 드립니다.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#ff7a3d; color:#fff; font-size:24px; font-weight:800; display:flex; align-items:center; justify-content:center;">4</div>
+        <h4 style="font-size:19px; font-weight:800; color:#0f2742; margin-bottom:8px;">시공 · 완료</h4>
+        <p style="font-size:14.5px; line-height:1.6; color:#5b6573;">전문 시공 후 안전점검까지 마치고 마무리합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AREA ===== -->
+  <section id="area" style="background:#0c2f5a; color:#fff;">
+    <div class="sec grid-2" style="max-width:1180px; margin:0 auto; padding:96px 32px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+      <div>
+        <div style="font-size:14px; font-weight:700; letter-spacing:0.08em; color:#7fb3ec; margin-bottom:14px;">SERVICE AREA</div>
+        <h2 class="h2-big" style="font-size:40px; font-weight:800; letter-spacing:-0.03em; line-height:1.25; margin-bottom:22px;">서울·경기<br>수도권 전 지역 시공</h2>
+        <p style="font-size:17px; line-height:1.74; color:rgba(255,255,255,0.78); margin-bottom:30px;">서울특별시와 경기도 일대를 중심으로 신속하게 방문합니다. 지역이 궁금하시면 부담 없이 문의해 주세요.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:9px 17px; border-radius:100px; font-size:15px; font-weight:600;">서울 전역</span>
+          <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:9px 17px; border-radius:100px; font-size:15px; font-weight:600;">경기 전역</span>
+          <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:9px 17px; border-radius:100px; font-size:15px; font-weight:600;">인천 일부</span>
+        </div>
+      </div>
+      <div style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:16/11; background:repeating-linear-gradient(135deg,#103a68,#103a68 14px,#123e6e 14px,#123e6e 28px); border:1px solid rgba(255,255,255,0.14); display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:ui-monospace,Menlo,monospace; font-size:13px; color:rgba(255,255,255,0.5); text-align:center; line-height:1.7;">시공 지역 지도<br>(서울·경기 표시)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE / CONTACT ===== -->
+  <section id="quote" class="sec" style="max-width:1180px; margin:0 auto; padding:108px 32px;">
+    <div class="grid-2" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-size:14px; font-weight:700; letter-spacing:0.08em; color:#0f4c91; margin-bottom:14px;">CONTACT</div>
+        <h2 class="h2-big" style="font-size:42px; font-weight:800; letter-spacing:-0.03em; color:#0f2742; line-height:1.22; margin-bottom:22px;">견적 문의</h2>
+        <p style="font-size:17px; line-height:1.74; color:#5b6573; margin-bottom:32px;">현장 상황을 알려주시면 빠르게 연락드리겠습니다. 전화 상담도 언제든 환영합니다.</p>
+
+        <a href="tel:01064048062" class="contact-card" style="display:flex; align-items:center; gap:18px; background:#0f4c91; color:#fff; border-radius:16px; padding:22px 26px; margin-bottom:12px;">
+          <div style="width:48px; height:48px; border-radius:12px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; flex:none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <div style="font-size:13.5px; color:rgba(255,255,255,0.75); margin-bottom:3px;">김혁</div>
+            <div style="font-size:24px; font-weight:800; letter-spacing:-0.01em;">010-6404-8062</div>
+          </div>
+        </a>
+        <a href="tel:01028189739" class="contact-card" style="display:flex; align-items:center; gap:18px; background:#0f4c91; color:#fff; border-radius:16px; padding:22px 26px; margin-bottom:16px;">
+          <div style="width:48px; height:48px; border-radius:12px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; flex:none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <div style="font-size:13.5px; color:rgba(255,255,255,0.75); margin-bottom:3px;">이승률</div>
+            <div style="font-size:24px; font-weight:800; letter-spacing:-0.01em;">010-2818-9739</div>
+          </div>
+        </a>
+        <div style="display:flex; gap:16px; padding:0 4px;">
+          <div style="flex:1;">
+            <div style="font-size:13.5px; color:#8a929c; margin-bottom:5px;">상담 시간</div>
+            <div style="font-size:16px; font-weight:700; color:#0f2742;">평일·주말 08:00 ~ 20:00</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:13.5px; color:#8a929c; margin-bottom:5px;">이메일</div>
+            <div style="font-size:16px; font-weight:700; color:#0f2742;">battle0530@naver.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#f6f8fa; border:1px solid #e9ebef; border-radius:20px; padding:40px;">
+        <div style="display:grid; gap:20px;">
+          <div>
+            <label style="display:block; font-size:14.5px; font-weight:700; color:#0f2742; margin-bottom:9px;">성함</label>
+            <input id="qf-name" type="text" placeholder="홍길동" style="width:100%; height:50px; border:1px solid #d8dce1; border-radius:11px; padding:0 16px; font-size:15.5px; font-family:inherit; background:#fff; outline:none;">
+          </div>
+          <div>
+            <label style="display:block; font-size:14.5px; font-weight:700; color:#0f2742; margin-bottom:9px;">연락처</label>
+            <input id="qf-phone" type="tel" placeholder="010-1234-5678" style="width:100%; height:50px; border:1px solid #d8dce1; border-radius:11px; padding:0 16px; font-size:15.5px; font-family:inherit; background:#fff; outline:none;">
+          </div>
+          <div>
+            <label style="display:block; font-size:14.5px; font-weight:700; color:#0f2742; margin-bottom:9px;">시공 종류</label>
+            <div style="display:flex; gap:9px;">
+              <button type="button" id="qf-btn0" onclick="qfPick(0)" style="flex:1; height:46px; border-radius:11px; font-size:14.5px; font-weight:700; font-family:inherit; cursor:pointer; transition:all .15s; background:#0f4c91; color:#fff; border:1px solid #0f4c91;">신규설치</button>
+              <button type="button" id="qf-btn1" onclick="qfPick(1)" style="flex:1; height:46px; border-radius:11px; font-size:14.5px; font-weight:700; font-family:inherit; cursor:pointer; transition:all .15s; background:#fff; color:#5b6573; border:1px solid #d8dce1;">철거</button>
+              <button type="button" id="qf-btn2" onclick="qfPick(2)" style="flex:1; height:46px; border-radius:11px; font-size:14.5px; font-weight:700; font-family:inherit; cursor:pointer; transition:all .15s; background:#fff; color:#5b6573; border:1px solid #d8dce1;">노후화교체</button>
+            </div>
+          </div>
+          <div>
+            <label style="display:block; font-size:14.5px; font-weight:700; color:#0f2742; margin-bottom:9px;">현장 위치 · 문의 내용</label>
+            <textarea id="qf-msg" placeholder="예) 경기 ○○시 ○○동 단독주택, 노후 배관 교체 문의드립니다." style="width:100%; height:118px; border:1px solid #d8dce1; border-radius:11px; padding:14px 16px; font-size:15.5px; font-family:inherit; background:#fff; outline:none; resize:none; line-height:1.6;"></textarea>
+          </div>
+          <button type="button" id="qf-submit" onclick="qfSubmit()" style="width:100%; height:56px; background:#ff7a3d; color:#fff; font-size:17px; font-weight:800; border:none; border-radius:13px; cursor:pointer; box-shadow:0 10px 24px rgba(255,122,61,0.3);">견적 문의 보내기</button>
+          <p id="qf-status" style="display:none; font-size:14.5px; font-weight:700; text-align:center; line-height:1.6;"></p>
+          <p style="font-size:13px; color:#8a929c; text-align:center; line-height:1.6;">남겨주신 연락처로 빠른 시일 내에 회신드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#0a1f3a; color:rgba(255,255,255,0.6);">
+    <div class="footer-wrap" style="max-width:1180px; margin:0 auto; padding:54px 32px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;">
+          <span style="width:30px; height:30px; border-radius:8px; background:#0f4c91; display:flex; align-items:center; justify-content:center;">
+            <span style="width:11px; height:11px; border-radius:50% 50% 50% 2px; background:#ff7a3d; transform:rotate(45deg);"></span>
+          </span>
+          <span style="font-size:16px; font-weight:800; color:#fff;">도시가스 전문공사</span>
+        </div>
+        <p style="font-size:14px; line-height:1.7;">서울·경기 도시가스 배관 신규설치 · 철거 · 노후화 교체 전문<br>가스시설 시공 자격 보유 업체</p>
+      </div>
+      <div class="footer-right" style="text-align:right; font-size:14px; line-height:1.9;">
+        <div style="font-size:18px; font-weight:800; color:#fff; margin-bottom:4px;">김혁 010-6404-8062</div>
+        <div style="font-size:18px; font-weight:800; color:#fff; margin-bottom:8px;">이승률 010-2818-9739</div>
+        <div>상담시간 08:00 ~ 20:00</div>
+        <div>battle0530@naver.com</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-size:13px; color:rgba(255,255,255,0.4);">© 2026 도시가스 전문공사. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var ON = "flex:1; height:46px; border-radius:11px; font-size:14.5px; font-weight:700; font-family:inherit; cursor:pointer; transition:all .15s; background:#0f4c91; color:#fff; border:1px solid #0f4c91;";
+    var OFF = "flex:1; height:46px; border-radius:11px; font-size:14.5px; font-weight:700; font-family:inherit; cursor:pointer; transition:all .15s; background:#fff; color:#5b6573; border:1px solid #d8dce1;";
+    var TYPES = ["신규설치", "철거", "노후화교체"];
+    var selected = 0;
+
+    window.qfPick = function (i) {
+      selected = i;
+      for (var k = 0; k < 3; k++) {
+        var btn = document.getElementById("qf-btn" + k);
+        if (btn) btn.setAttribute("style", k === i ? ON : OFF);
+      }
+    };
+
+    var ENDPOINT = "https://formsubmit.co/ajax/battle0530@naver.com";
+
+    function setStatus(text, color) {
+      var s = document.getElementById("qf-status");
+      if (!s) return;
+      s.textContent = text;
+      s.style.color = color;
+      s.style.display = "block";
+    }
+
+    window.qfSubmit = function () {
+      var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
+      var name = val("qf-name");
+      var phone = val("qf-phone");
+      var msg = val("qf-msg");
+      if (!name && !phone) {
+        setStatus("성함과 연락처를 입력해 주세요.", "#d23f3f");
+        return;
+      }
+      var type = TYPES[selected] || "";
+      var btn = document.getElementById("qf-submit");
+      var label = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.style.opacity = "0.7"; btn.textContent = "전송 중…"; }
+      setStatus("전송 중…", "#5b6573");
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          "성함": name,
+          "연락처": phone,
+          "시공 종류": type,
+          "문의 내용": msg,
+          "_subject": "[견적문의] " + (name || "고객") + (type ? " / " + type : ""),
+          "_template": "table"
+        })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && (d.success === "true" || d.success === true)) {
+            setStatus("✓ 문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.", "#1a8a4a");
+            ["qf-name", "qf-phone", "qf-msg"].forEach(function (id) {
+              var el = document.getElementById(id); if (el) el.value = "";
+            });
+          } else {
+            setStatus("전송에 실패했습니다. 전화(010-6404-8062)로 문의해 주세요.", "#d23f3f");
+          }
+        })
+        .catch(function () {
+          setStatus("전송 중 오류가 발생했습니다. 전화(010-6404-8062)로 문의해 주세요.", "#d23f3f");
+        })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.style.opacity = "1"; btn.textContent = label; }
+        });
+    };
+  })();
+</script>
+
+</body>
+</html>
