@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL2XCTBX2X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL2XCTBX2X');
+</script>
+
 <title>도시가스 신설·철거·노후배관 교체 | MJ도시가스 - 서울·경기·인천</title>
 <meta name="description" content="서울·경기·인천 도시가스 전문공사. 자격 보유 전문 기술자가 도시가스 신설, 배관 철거·폐쇄, 노후배관 교체를 직접 시공합니다. 전화 상담과 현장 방문 견적 모두 무료, 평일·주말 08:00~20:00 상담 가능.">
 <link rel="canonical" href="https://mjdosigas.kr/">
@@ -472,6 +482,17 @@
 
   if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
+  /* GA4 전환 추적. 광고 차단기가 gtag를 지워도 페이지가 죽지 않도록 감싼다 */
+  function track(name, params) {
+    if (typeof gtag === "function") gtag("event", name, params || {});
+  }
+
+  /* 전화 걸기 클릭 — tel: 링크 5곳(히어로·문의카드·모바일 고정버튼)을 위임으로 한 번에 */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (a) track("phone_click", { phone_number: a.getAttribute("href").slice(4) });
+  });
+
   function faqToggle(btn) {
     var item = btn.parentElement;
     var ans = item.querySelector(".faq-a");
@@ -509,11 +530,13 @@
 
     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
       .then(function () {
+        track("inquiry_submit");
         alert("문의가 접수되었습니다. 확인 후 빠르게 연락드리겠습니다.");
         form.reset();
         checkContact(form.elements.email);
       })
       .catch(function (err) {
+        track("inquiry_error");
         console.error("EmailJS 전송 실패", err);
         alert("전송에 실패했습니다. 010-2818-9739 로 전화 주시면 바로 상담 도와드리겠습니다.");
       })
