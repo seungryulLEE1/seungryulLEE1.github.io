@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GASTECH 도시가스 전문공사 | 신설·철거·노후배관 교체</title>
+<title>MJ도시가스 | 도시가스 전문공사 · 신설·철거·노후배관 교체</title>
 <meta name="description" content="서울·경기·인천 도시가스 전문공사. 자격증 보유 전문 기술자가 신설·철거·노후배관 교체를 정직하게 시공합니다. 상담·현장 견적 무료.">
+<meta name="google-site-verification" content="Q7-z5W2enQ9_UHy1JtOo6GS4CI90eb9CPJL0Vy6xHyk">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0d1a2e">
 <link rel="preconnect" href="https://fastly.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
@@ -22,6 +26,12 @@
   .eyebrow { font-size:13.5px; font-weight:700; letter-spacing:0.12em; color:var(--orange); margin-bottom:14px; }
   .h2-big { font-size:38px; font-weight:800; letter-spacing:-0.03em; color:var(--ink); line-height:1.22; }
 
+  .inq-label { display:block; font-size:13.5px; font-weight:700; color:var(--ink); margin-bottom:7px; }
+  .inq-input { width:100%; font-family:inherit; font-size:15px; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:11px; padding:13px 15px; outline:none; transition:border-color .15s, box-shadow .15s; }
+  .inq-input::placeholder { color:#a8b0ba; }
+  .inq-input:focus { border-color:var(--orange); box-shadow:0 0 0 3px rgba(232,92,42,0.14); }
+  textarea.inq-input { resize:vertical; min-height:132px; line-height:1.65; }
+
   @media (max-width:860px) {
     .nav-links, .nav-cta { display:none !important; }
     .nav-wrap { padding:0 20px !important; height:64px !important; }
@@ -30,7 +40,7 @@
     .hero-cards { flex-direction:row !important; flex-wrap:wrap !important; }
     .hero-cards > div { flex:1 1 30% !important; }
     .sec { padding-left:22px !important; padding-right:22px !important; padding-top:64px !important; padding-bottom:64px !important; }
-    .grid-3, .grid-2 { grid-template-columns:1fr !important; }
+    .grid-3, .grid-2, .inq-row { grid-template-columns:1fr !important; }
     .grid-4 { grid-template-columns:repeat(2,1fr) !important; }
     .grid-5 { grid-template-columns:repeat(2,1fr) !important; row-gap:34px !important; }
     .why-inner { grid-template-columns:1fr !important; gap:40px !important; }
@@ -47,7 +57,8 @@
     .h2-big { font-size:25px !important; }
     .sec { padding-top:48px !important; padding-bottom:48px !important; }
     .grid-5 { grid-template-columns:1fr !important; }
-    .svc-card { padding:26px 22px !important; }
+    .svc-card, .inq-card { padding:26px 22px !important; }
+    .inq-input { font-size:16px !important; }  /* iOS 포커스 시 자동 확대 방지 */
   }
   @media (max-width:430px) {
     .why-cards, .grid-4 { grid-template-columns:1fr !important; }
@@ -67,7 +78,7 @@
           <span style="width:13px; height:13px; border-radius:50% 50% 50% 2px; background:#fff; transform:rotate(45deg);"></span>
         </span>
         <span style="display:flex; flex-direction:column; line-height:1.1;">
-          <span style="font-size:18px; font-weight:800; letter-spacing:0.02em; color:#fff;">GASTECH</span>
+          <span style="font-size:18px; font-weight:800; letter-spacing:-0.01em; color:#fff;">MJ도시가스</span>
           <span style="font-size:11px; font-weight:600; letter-spacing:0.02em; color:rgba(255,255,255,0.55);">도시가스 전문공사</span>
         </span>
       </a>
@@ -323,6 +334,43 @@
       </div>
 
     </div>
+
+    <form id="inq-form" class="inq-card" onsubmit="return sendInquiry(this)" style="background:#fff; border:1px solid var(--line); border-radius:18px; padding:32px 30px; margin-bottom:22px;">
+      <div style="font-size:19px; font-weight:800; color:var(--ink); margin-bottom:5px;">온라인 문의</div>
+      <p style="font-size:14px; color:var(--muted); margin-bottom:24px;">아래 내용을 남겨주시면 확인 후 빠르게 연락드리겠습니다.</p>
+
+      <!-- 메일 보낸사람 이름({{name}}). 이름 입력칸이 생기면 이 hidden을 실제 input으로 교체 -->
+      <input type="hidden" name="name" value="MJ도시가스 홈페이지 문의">
+
+      <div style="margin-bottom:16px;">
+        <label class="inq-label" for="inq-title">제목 <span style="color:var(--orange);">*</span></label>
+        <input class="inq-input" type="text" id="inq-title" name="title" required maxlength="60" placeholder="예) 노후배관 교체 견적 문의">
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <label class="inq-label" for="inq-message">내용 <span style="color:var(--orange);">*</span></label>
+        <textarea class="inq-input" id="inq-message" name="message" required rows="5" placeholder="주소, 건물 형태, 희망 시공일 등을 함께 적어주시면 더 정확하게 안내드립니다."></textarea>
+      </div>
+
+      <div class="inq-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:9px;">
+        <div>
+          <label class="inq-label" for="inq-email">이메일</label>
+          <input class="inq-input" type="email" id="inq-email" name="email" autocomplete="email" placeholder="example@naver.com" oninput="checkContact(this)">
+        </div>
+        <div>
+          <label class="inq-label" for="inq-phone">전화번호</label>
+          <input class="inq-input" type="tel" id="inq-phone" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9\-\+\s]{9,20}" title="숫자와 - 만 입력해 주세요 (예: 010-0000-0000)" placeholder="010-0000-0000" oninput="checkContact(this)">
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:24px;">이메일 · 전화번호 중 <strong style="color:var(--orange);">하나 이상</strong>은 꼭 입력해 주세요.</p>
+
+      <button type="submit" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; background:var(--orange); color:#fff; font-family:inherit; font-size:16px; font-weight:800; border:0; border-radius:12px; padding:16px 26px; cursor:pointer; box-shadow:0 10px 26px rgba(232,92,42,0.28);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4 20-7z"></path></svg>
+        문의 보내기
+      </button>
+      <p style="font-size:13px; color:#8a929c; margin-top:12px; text-align:center;">남겨주신 연락처로 확인 후 빠르게 회신드립니다.</p>
+    </form>
+
     <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; background:var(--gray-bg); border-radius:16px; padding:24px 28px;">
       <div>
         <div style="font-size:13.5px; color:#8a929c; margin-bottom:5px;">시공 가능 지역</div>
@@ -343,7 +391,7 @@
           <span style="width:32px; height:32px; border-radius:8px; background:var(--orange); display:flex; align-items:center; justify-content:center;">
             <span style="width:11px; height:11px; border-radius:50% 50% 50% 2px; background:#fff; transform:rotate(45deg);"></span>
           </span>
-          <span style="font-size:17px; font-weight:800; color:#fff; letter-spacing:0.02em;">GASTECH</span>
+          <span style="font-size:17px; font-weight:800; color:#fff; letter-spacing:-0.01em;">MJ도시가스</span>
         </div>
         <p style="font-size:14px; line-height:1.7;">도시가스 전문공사 · 신설 / 철거 / 노후배관 교체<br>서울 · 경기 · 인천 가스시설 시공 자격 보유 업체</p>
       </div>
@@ -355,7 +403,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.1);">
-      <div class="wrap" style="padding:22px 32px; font-size:13px; color:rgba(255,255,255,0.4);">ⓒ 2025 GASTECH. All rights reserved.</div>
+      <div class="wrap" style="padding:22px 32px; font-size:13px; color:rgba(255,255,255,0.4);">ⓒ 2025 MJ도시가스. All rights reserved.</div>
     </div>
   </footer>
 
@@ -367,7 +415,15 @@
   무료 견적 문의
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+  /* ===== EmailJS 설정 ===== */
+  var EMAILJS_PUBLIC_KEY  = "8hk1p7WKIgD7f4hlE";
+  var EMAILJS_SERVICE_ID  = "service_efpoz3t";
+  var EMAILJS_TEMPLATE_ID = "template_umq7uc5";
+
+  if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
   function faqToggle(btn) {
     var item = btn.parentElement;
     var ans = item.querySelector(".faq-a");
@@ -380,6 +436,46 @@
       ans.style.maxHeight = ans.scrollHeight + "px";
       ico.style.transform = "rotate(180deg)";
     }
+  }
+
+  /* 이메일·전화번호는 둘 중 하나만 채워도 통과 (브라우저 기본 검증 UI 사용) */
+  function checkContact(el) {
+    var f = el.form || document.getElementById("inq-form");
+    var email = f.elements.email, phone = f.elements.phone;
+    var msg = (email.value.trim() || phone.value.trim()) ? "" : "이메일 또는 전화번호 중 하나는 꼭 입력해 주세요.";
+    email.setCustomValidity(msg);
+    phone.setCustomValidity(msg);
+  }
+  checkContact(document.getElementById("inq-email"));
+
+  function sendInquiry(form) {
+    if (!window.emailjs) {                       // CDN 차단 시 입력 내용이 날아가지 않도록
+      alert("전송 모듈을 불러오지 못했습니다. 010-2818-9739 로 전화 주시면 바로 상담 도와드리겠습니다.");
+      return false;
+    }
+    var btn = form.querySelector("button[type=submit]");
+    var label = btn.innerHTML;
+    btn.disabled = true;
+    btn.style.opacity = "0.6";
+    btn.textContent = "전송 중…";
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      .then(function () {
+        alert("문의가 접수되었습니다. 확인 후 빠르게 연락드리겠습니다.");
+        form.reset();
+        checkContact(form.elements.email);
+      })
+      .catch(function (err) {
+        console.error("EmailJS 전송 실패", err);
+        alert("전송에 실패했습니다. 010-2818-9739 로 전화 주시면 바로 상담 도와드리겠습니다.");
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.style.opacity = "";
+        btn.innerHTML = label;
+      });
+
+    return false;
   }
 </script>
 
